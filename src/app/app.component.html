@@ -1,2 +1,3 @@
-<app-home></app-home>
-<router-outlet></router-outlet>
+<app-home *ngIf="!opentours"(toursData)="toursInfo($event)"> </app-home>
+<app-tours *ngIf="opentours"></app-tours>
+

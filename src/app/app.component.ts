@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'natours-frontend';
+  opentours:boolean=false;
+  toursInfo(event:any){
+    if(event){
+this.opentours=true;
+    }
+  }
 }
