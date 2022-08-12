@@ -6,13 +6,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Output() toursData:EventEmitter<any>= new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
   
-  goToTours(){
- this.toursData.emit(true);
-  }
 }
