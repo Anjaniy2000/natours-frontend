@@ -1,13 +1,4 @@
-.grid-container {
-  max-width: 120rem;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 4rem;
-}
-.card-deck {
-  padding: 4rem;
-}
-.card {
-  margin: 0%;
+.btn-custom {
+  background-color: #20bf6b;
+  color: white;
 }

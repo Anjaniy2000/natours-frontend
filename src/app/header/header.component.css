@@ -1,9 +1,9 @@
 .login,
 .sign-up {
   background-color: transparent;
-  border-color: #28b485;
-  color: #28b485;
-  fill: #28b485;
+  border-color: #55c57a;
+  color: #20bf6b;
+  fill: #20bf6b;
   border: 1px solid;
   border-radius: 4px;
   box-sizing: border-box;
@@ -20,8 +20,8 @@
 }
 
 .sign-up {
-  background-color: #28b485;
-  border-color: #28b485;
+  background-color: #20bf6b;
+  border-color: #55c57a;
   color: aliceblue;
 }
 
