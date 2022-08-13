@@ -1,126 +1,29 @@
 <div class="container mt-2 mb-2">
   <div class="row">
-    <div class="col-sm-4 py-3">
+    <div class="col-sm-4 py-3" *ngFor="let tour of toursData">
       <div class="card shadow-sm bg-white rounded">
-        <img src="./assets/img/tours/tour-2-cover.jpg" class="card-img-top" />
+        <img
+          src="./assets/img/tours/{{ tour.imageCover }}"
+          class="card-img-top"
+        />
         <div class="card-body">
-          <h5 class="card-title">THE SEA EXPLORER</h5>
+          <h5 class="card-title">{{ tour.name }}</h5>
           <p class="card-text">
-            Exploring the jaw-dropping US east coast by foot and by boat
+            {{ tour.summary }}
           </p>
         </div>
 
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Rating: 4.8</li>
-          <li class="list-group-item">Price: 497$</li>
-          <li class="list-group-item">Duration: 7 Days</li>
-          <li class="list-group-item">Start Location: Miami, USA</li>
-          <li class="list-group-item">Start Date: 11/6/2022</li>
-        </ul>
-        <button type="button" class="btn btn-custom m-2">Details</button>
-      </div>
-    </div>
-
-    <div class="col-sm-4 py-3">
-      <div class="card shadow-sm bg-white rounded">
-        <img src="./assets/img/tours/tour-2-cover.jpg" class="card-img-top" />
-        <div class="card-body">
-          <h5 class="card-title">THE SEA EXPLORER</h5>
-          <p class="card-text">
-            Exploring the jaw-dropping US east coast by foot and by boat
-          </p>
-        </div>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Rating: 4.8</li>
-          <li class="list-group-item">Price: 497$</li>
-          <li class="list-group-item">Duration: 7 Days</li>
-          <li class="list-group-item">Start Location: Miami, USA</li>
-          <li class="list-group-item">Start Date: 11/6/2022</li>
-        </ul>
-        <button type="button" class="btn btn-custom m-2">Details</button>
-      </div>
-    </div>
-
-    <div class="col-sm-4 py-3">
-      <div class="card shadow-sm bg-white rounded">
-        <img src="./assets/img/tours/tour-2-cover.jpg" class="card-img-top" />
-        <div class="card-body">
-          <h5 class="card-title">THE SEA EXPLORER</h5>
-          <p class="card-text">
-            Exploring the jaw-dropping US east coast by foot and by boat
-          </p>
-        </div>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Rating: 4.8</li>
-          <li class="list-group-item">Price: 497$</li>
-          <li class="list-group-item">Duration: 7 Days</li>
-          <li class="list-group-item">Start Location: Miami, USA</li>
-          <li class="list-group-item">Start Date: 11/6/2022</li>
-        </ul>
-        <button type="button" class="btn btn-custom m-2">Details</button>
-      </div>
-    </div>
-
-    <div class="col-sm-4 py-3">
-      <div class="card shadow-sm bg-white rounded">
-        <img src="./assets/img/tours/tour-2-cover.jpg" class="card-img-top" />
-        <div class="card-body">
-          <h5 class="card-title">THE SEA EXPLORER</h5>
-          <p class="card-text">
-            Exploring the jaw-dropping US east coast by foot and by boat
-          </p>
-        </div>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Rating: 4.8</li>
-          <li class="list-group-item">Price: 497$</li>
-          <li class="list-group-item">Duration: 7 Days</li>
-          <li class="list-group-item">Start Location: Miami, USA</li>
-          <li class="list-group-item">Start Date: 11/6/2022</li>
-        </ul>
-        <button type="button" class="btn btn-custom m-2">Details</button>
-      </div>
-    </div>
-
-    <div class="col-sm-4 py-3">
-      <div class="card shadow-sm bg-white rounded">
-        <img src="./assets/img/tours/tour-2-cover.jpg" class="card-img-top" />
-        <div class="card-body">
-          <h5 class="card-title">THE SEA EXPLORER</h5>
-          <p class="card-text">
-            Exploring the jaw-dropping US east coast by foot and by boat
-          </p>
-        </div>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Rating: 4.8</li>
-          <li class="list-group-item">Price: 497$</li>
-          <li class="list-group-item">Duration: 7 Days</li>
-          <li class="list-group-item">Start Location: Miami, USA</li>
-          <li class="list-group-item">Start Date: 11/6/2022</li>
-        </ul>
-        <button type="button" class="btn btn-custom m-2">Details</button>
-      </div>
-    </div>
-
-    <div class="col-sm-4 py-3">
-      <div class="card shadow-sm bg-white rounded">
-        <img src="./assets/img/tours/tour-2-cover.jpg" class="card-img-top" />
-        <div class="card-body">
-          <h5 class="card-title">THE SEA EXPLORER</h5>
-          <p class="card-text">
-            Exploring the jaw-dropping US east coast by foot and by boat
-          </p>
-        </div>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Rating: 4.8</li>
-          <li class="list-group-item">Price: 497$</li>
-          <li class="list-group-item">Duration: 7 Days</li>
-          <li class="list-group-item">Start Location: Miami, USA</li>
-          <li class="list-group-item">Start Date: 11/6/2022</li>
+          <li class="list-group-item">Rating: {{ tour.ratingsAverage }}</li>
+          <li class="list-group-item">Price: {{ tour.price }}$</li>
+          <li class="list-group-item">Duration: {{ tour.duration }} Days</li>
+          <li class="list-group-item">
+            Start Location: {{ tour.startLocation.description }}
+          </li>
+          <li class="list-group-item">Stops: {{ tour.locations.length }}</li>
+          <li class="list-group-item">
+            Start Date: {{ tour.startDates[0] | date: "MMMM YYYY" }}
+          </li>
         </ul>
         <button type="button" class="btn btn-custom m-2">Details</button>
       </div>

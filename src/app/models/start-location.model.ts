@@ -1,7 +1,6 @@
-export interface Location {
-  id: string;
+export interface StartLocation {
   description: string;
   type: string;
   coordinates: Array<number>;
-  day: number;
+  address: string;
 }
