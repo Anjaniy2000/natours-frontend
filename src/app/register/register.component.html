@@ -9,16 +9,22 @@
           <!-- to error: add class "has-danger" -->
           <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control form-control-sm" />
+            <input type="text" #input1 class="form-control form-control-sm" 
+            (blur)="saveName(input1.value)"
+            />
             <label>Email address</label>
-            <input type="email" class="form-control form-control-sm" />
+            <input type="email" #input2 class="form-control form-control-sm"
+            (blur)="saveEmail(input2.value)"
+             />
           </div>
           <div class="form-group">
             <label>Password</label>
 
-            <input type="password" class="form-control form-control-sm" />
+            <input type="password" #input3 class="form-control form-control-sm" 
+            (blur)="savePassword(input3.value)"
+            />
           </div>
-          <button type="submit" class="btn btn-custom">Register</button>
+          <button type="submit" class="btn btn-custom" (click)="registerCustomer()">Register</button>
         </form>
       </div>
     </div>
