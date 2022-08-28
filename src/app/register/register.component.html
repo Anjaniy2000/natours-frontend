@@ -3,28 +3,22 @@
     <div class="card-body">
       <h3 class="card-title text-center">REGISTER</h3>
       <div class="card-text">
-        <!--
-              <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-        <form>
-          <!-- to error: add class "has-danger" -->
+        <form [formGroup]="form" (submit)="onRegister()">
           <div class="form-group">
             <label>Name</label>
-            <input type="text" #input1 class="form-control form-control-sm" 
-            (blur)="saveName(input1.value)"
+            <input  formControlName="name" class="form-control form-control-sm" placeholder="Name"
             />
             <label>Email address</label>
-            <input type="email" #input2 class="form-control form-control-sm"
-            (blur)="saveEmail(input2.value)"
+            <input formControlName="email" class="form-control form-control-sm" placeholder="Email"
              />
           </div>
           <div class="form-group">
             <label>Password</label>
 
-            <input type="password" #input3 class="form-control form-control-sm" 
-            (blur)="savePassword(input3.value)"
+            <input  formControlName="password" class="form-control form-control-sm" placeholder="Password"
             />
           </div>
-          <button type="submit" class="btn btn-custom" (click)="registerCustomer()">Register</button>
+          <button type="submit" class="btn btn-custom" >Register</button>
         </form>
       </div>
     </div>

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Register } from '../models/register.model';
 import { AuthService } from '../services/auth.service';
 
@@ -9,22 +11,20 @@ import { AuthService } from '../services/auth.service';
 })
 export class RegisterComponent implements OnInit {
  regData:Register=new  Register();
-  constructor(private reg:AuthService) { }
-
+  constructor(private http:HttpClient,private formBuilder:FormBuilder,private auth:AuthService) { }
+form!:FormGroup
   ngOnInit(): void {
-
+this.form=this.formBuilder.group({
+  name:'',
+  email:'',
+  password:''
+})
   }
-  registerCustomer(){
-    this.reg.register(this.regData);
-}
-
-saveName(data:any){
-  this.regData.name=data;
-}
-saveEmail(data:any){
-  this.regData.email=data;
-}
-savePassword(data:any){
-  this.regData.password=data;
+  onRegister(){
+    this.auth.register(this.form.getRawValue()).subscribe((res:any)=>{
+      if(res){
+        console.log(res);
+      }
+    });
 }
 }
