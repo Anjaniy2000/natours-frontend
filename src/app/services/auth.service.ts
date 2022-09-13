@@ -13,4 +13,10 @@ export class AuthService {
     });
     return res;
   }
+  login(data: any) {
+    let res = this.http.post('http://localhost:8083/api/auth/login', data, {
+      withCredentials:true,
+    });
+    return res;
+  }
 }
