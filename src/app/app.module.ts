@@ -13,8 +13,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +32,7 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    NgxWebstorageModule.forRoot(),
   ],
   providers: [
     {

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   onLogin(){
     this.auth.login(this.form.getRawValue()).subscribe((res: any) => {
       if (res) {
-        AuthInterceptor.accessToken=res.authenticationToken;
+        //AuthInterceptor.accessToken=res.authenticationToken;
         console.log(res);
         this.router.navigate(['/'])
       }
